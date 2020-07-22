@@ -29,9 +29,13 @@ public class Person {
 
     @Override
     public boolean equals(Object obj) {
-        Person person = (Person) obj;
-        if (person.getId() == this.id) {
-            return true;
+        if (obj instanceof Person) {
+            Person person = (Person) obj;
+            if (person.getId() == this.id) {
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return false;
         }
